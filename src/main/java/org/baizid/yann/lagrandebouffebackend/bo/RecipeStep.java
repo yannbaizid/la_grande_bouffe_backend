@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-public class RecipeSteps {
+public class RecipeStep {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
