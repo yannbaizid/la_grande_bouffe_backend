@@ -31,5 +31,5 @@ public class Recipe {
 	List<IngredientQuantified> ingredientQuantifiedList;
 
 	@ManyToOne
-	List<RecipeSteps> DescriptionSteps;
+	List<RecipeStep> DescriptionSteps;
 }
