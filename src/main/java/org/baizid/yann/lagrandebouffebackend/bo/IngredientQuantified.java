@@ -1,8 +1,5 @@
 package org.baizid.yann.lagrandebouffebackend.bo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,21 +12,17 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-public class Recipe {
+public class IngredientQuantified {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
 
-	String name;
-	
-	int difficulty;
-	int preparationTime;
-	int personsServed;
-	
-	@ManyToOne
-	List<IngredientQuantified> ingredientQuantifiedList;
+	float quantity;
 
 	@ManyToOne
-	List<RecipeSteps> DescriptionSteps;
+	Ingredient ingredient;
+	@ManyToOne
+	MeasurementUnit measurmentUnit;
+
 }
