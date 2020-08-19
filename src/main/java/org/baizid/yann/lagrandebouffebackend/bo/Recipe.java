@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,9 +28,9 @@ public class Recipe {
 	int preparationTime;
 	int personsServed;
 	
-	@ManyToOne
+	@OneToMany
 	List<IngredientQuantified> ingredientQuantifiedList;
 
-	@ManyToOne
+	@OneToMany
 	List<RecipeStep> DescriptionSteps;
 }

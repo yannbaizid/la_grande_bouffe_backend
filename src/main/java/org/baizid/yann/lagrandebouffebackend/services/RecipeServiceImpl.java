@@ -6,7 +6,9 @@ import java.util.Optional;
 import org.baizid.yann.lagrandebouffebackend.bo.Recipe;
 import org.baizid.yann.lagrandebouffebackend.dao.RecipeDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class RecipeServiceImpl implements RecipeService {
 	@Autowired
 	RecipeDao recipeDao;
