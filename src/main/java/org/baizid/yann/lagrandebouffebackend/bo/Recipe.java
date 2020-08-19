@@ -28,6 +28,8 @@ public class Recipe {
 	int preparationTime;
 	int personsServed;
 	
+	String imageLink;
+	
 	@OneToMany
 	List<IngredientQuantified> ingredientQuantifiedList;
 
